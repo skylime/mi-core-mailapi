@@ -8,3 +8,4 @@ if ! zfs list $DDS > /dev/null; then
 fi
 
 zfs set mountpoint=/var/db/redis/ $DDS
+chown redis /var/db/redis/
