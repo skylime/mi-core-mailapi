@@ -1,2 +1,10 @@
-# List packages to add to your image one per line.
+python33
+py33-cython
+py33-expat
+py33-pip
+py33-uwsgi
+py33-sqlite3
 nginx
+redis
+nano
+build-essential
