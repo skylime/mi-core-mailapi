@@ -28,14 +28,14 @@ mv limeade3-${L3REL}/ limeade3
 rm v${L3REL}.tar.gz
 cd -
 
+echo "* Install Python dependencies."
+pip3 install -r /var/www/limeade3/req.txt
+pip3 install -U git+https://github.com/lsbardel/python-stdnet.git@af8ca652d92ad4c00dbbbdec377ad69985a27992
+
 echo "* Generating Static files."
 cd /var/www/limeade3
 sudo -u www python3.3 manage.py collectstatic --noinput
 cd -
-
-echo "* Install Python dependencies."
-pip3 install -r /var/www/limeade3/req.txt
-pip3 install -U git+https://github.com/lsbardel/python-stdnet.git@af8ca652d92ad4c00dbbbdec377ad69985a27992
 
 echo "* Setup uwsgi and nginx."
 mkdir -p /opt/local/etc/uwsgi
