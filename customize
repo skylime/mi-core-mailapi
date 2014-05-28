@@ -34,7 +34,7 @@ pip3 install -U git+https://github.com/lsbardel/python-stdnet.git@af8ca652d92ad4
 
 echo "* Generating Static files."
 cd /var/www/limeade3
-sudo -u www python3.3 manage.py collectstatic --noinput
+python3.3 manage.py collectstatic --noinput
 cd -
 
 echo "* Setup uwsgi and nginx."
