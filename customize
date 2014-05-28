@@ -19,13 +19,13 @@ echo "* Configuring image specific packages.";
 pkg_add http://pkgsrc.smartos.skylime.net/skylime-extra/2014Q1/x86_64/spiped-1.3.1nb3.tgz
 
 echo "* Installing API Server."
-L3REL=v0.0.3
+L3REL=0.0.3
 mkdir /var/www
 cd /var/www
-wget https://github.com/wiedi/limeade3/archive/${L3REL}.tar.gz
-tar zxf ${L3REL}.tar.gz
+wget https://github.com/wiedi/limeade3/archive/v${L3REL}.tar.gz
+tar zxf v${L3REL}.tar.gz
 mv limeade3-${L3REL}/ limeade3
-rm ${L3REL}.tar.gz
+rm v${L3REL}.tar.gz
 cd -
 
 echo "* Generating Static files."
