@@ -6,10 +6,11 @@ Please refer to https://github.com/joyent/mibe for use of this repo.
 
 - <code>api_redis_key</code>: base64 encoded spipe key
 - <code>import_urls</code>: list of urls that provide a json dump of mail accounts and aliases. The format is described below.
+- <code>nginx_ssl</code>: ssl cert, key and CA for imaps and pop3s in pem format
+- <code>nginx_auth</code>: htpasswd authentication data (username:password_hash)
 
 ## Services
 
-- <code>80/tcp</code>: http api
 - <code>443/tcp</code>: https api
 - <code>63790/tcp</code>: spipe encrypted redis master
 

@@ -1,3 +1,7 @@
 #!/bin/bash
 /opt/core/bin/spiped-configure-smf api-redis decrypt [::]:63790 [127.0.0.1]:6379 $(mdata-get api_redis_key)
 
+mdata-get nginx_ssl > /opt/local/etc/nginx/ssl/nginx.pem
+chmod 400 /opt/local/etc/nginx/ssl/nginx.pem
+
+mdata-get nginx_auth > /opt/local/etc/nginx/auth.htpasswd
