@@ -9,6 +9,9 @@ Please refer to https://github.com/joyent/mibe for use of this repo.
 - <code>nginx_ssl</code>: ssl cert, key and CA for imaps and pop3s in pem format
 - <code>nginx_auth</code>: htpasswd authentication data (username:password_hash)
 
+- `munin_allow`: hosts that are allowed to connect to munin, separated by space
+- `munin_deny`: hosts that are explicit not allowed, separated by space
+
 ## Services
 
 - <code>443/tcp</code>: https api
