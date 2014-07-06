@@ -1,1 +1,1 @@
-svcadm enable svc:/coreio/mdata-setup
+svcadm enable -s svc:/coreio/mdata-setup
