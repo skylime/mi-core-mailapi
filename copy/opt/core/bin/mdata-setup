@@ -1,25 +1,17 @@
 #!/bin/bash
-/opt/core/bin/spiped-configure-smf api-redis decrypt [::]:63790 [127.0.0.1]:6379 $(mdata-get api_redis_key)
+# source all files from /opt/core/var/mdata-setup/includes/*.sh
+# we recommend a order by NUMBER-scriptname.sh
 
-mdata-get nginx_ssl > /opt/local/etc/nginx/ssl/nginx.pem
-chmod 400 /opt/local/etc/nginx/ssl/nginx.pem
+PATH=/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin:/bin:/sbin
+export PATH
 
-mdata-get nginx_auth > /opt/local/etc/nginx/auth.htpasswd
+# Set basedir for includes
+MDATA_SETUP_INC='/opt/core/var/mdata-setup/includes'
 
-# munin
-MUNIN_CONF='/opt/local/etc/munin/munin-node.conf'
-
-cp ${MUNIN_CONF}.tpl ${MUNIN_CONF}
-if mdata-get munin_allow 1>/dev/null 2>&1; then
-	echo "# mdata-get munin_allow" >> ${MUNIN_CONF}
-	for allow in $(mdata-get munin_allow); do
-		echo "cidr_allow ${allow}" >> ${MUNIN_CONF}
-	done
-fi
-
-if mdata-get munin_deny 1>/dev/null 2>&1; then
-	echo "# mdata-get munin_deny" >> ${MUNIN_CONF}
-	for deny in $(mdata-get munin_deny); do
-		echo "cidr_deny ${deny}" >> ${MUNIN_CONF}
+if [ -d "${MDATA_SETUP_INC}" ]; then
+	for FILE in ${MDATA_SETUP_INC}/*.sh; do
+		if [ -r "${FILE}" ]; then
+			source ${FILE}
+		fi
 	done
 fi
