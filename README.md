@@ -12,6 +12,11 @@ Please refer to https://github.com/joyent/mibe for use of this repo.
 - `munin_allow`: hosts that are allowed to connect to munin, separated by space
 - `munin_deny`: hosts that are explicit not allowed, separated by space
 
+- `syslog_host`: Syslog syntax for remote logging host:
+  - `@192.168.15.1:5514`:  UDP
+  - `@@192.168.15.1:5515`: TCP
+- `syslog_ssl`: Remote host SSL CA if you're using an encrypted channel
+
 ## Services
 
 - <code>443/tcp</code>: https api
