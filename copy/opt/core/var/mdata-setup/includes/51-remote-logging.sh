@@ -18,3 +18,6 @@ if mdata-get syslog_host 1>/dev/null 2>&1; then
 	echo '# send (all) messages'        >> ${RSYSLOG_CONF_D}/remote-logging.conf
 	echo "*.* $(mdata-get syslog_host)" >> ${RSYSLOG_CONF_D}/remote-logging.conf
 fi
+
+# Restart rsyslog after config change
+svcadm restart svc:/pkgsrc/rsyslog:default
