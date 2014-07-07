@@ -2,7 +2,7 @@
 #
 # Put customizations to your image in this file.
 
-MUNIN_PLUGIN_VERSION='0.1'
+MUNIN_PLUGIN_VERSION='0.2'
 
 PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
 
@@ -48,7 +48,7 @@ svccfg import /tmp/uwsgi.xml
 svccfg import /tmp/mdata-setup.xml
 rm /tmp/uwsgi.xml /tmp/mdata-setup.xml
 
-# munin
+# Create munin template file that will be used during mdata setup
 echo "* Create munin template file that will be used during mdata setup"
 cp /opt/local/etc/munin/munin-node.conf /opt/local/etc/munin/munin-node.conf.tpl
 
