@@ -37,6 +37,11 @@ cd /var/www/limeade3
 python3.3 manage.py collectstatic --noinput
 cd -
 
+echo "* Create database."
+cd /var/www/limeade3
+python manage.py syncdb --noinput
+cd -
+
 echo "* Setup uwsgi and nginx."
 mkdir -p /opt/local/etc/uwsgi
 svccfg import /tmp/uwsgi.xml
