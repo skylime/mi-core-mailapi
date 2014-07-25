@@ -39,7 +39,7 @@ cd -
 
 echo "* Create database."
 cd /var/www/limeade3
-python manage.py syncdb --noinput
+python3.3 manage.py syncdb --noinput
 cd -
 
 echo "* Setup uwsgi and nginx."
