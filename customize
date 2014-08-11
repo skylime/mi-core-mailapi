@@ -48,8 +48,7 @@ cd -
 echo "* Setup uwsgi and nginx."
 mkdir -p /opt/local/etc/uwsgi
 svccfg import /tmp/uwsgi.xml
-svccfg import /tmp/mdata-setup.xml
-rm /tmp/uwsgi.xml /tmp/mdata-setup.xml
+rm /tmp/uwsgi.xml
 
 # Clean up
 echo "* Cleaning up."
