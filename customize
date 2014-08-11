@@ -2,8 +2,6 @@
 #
 # Put customizations to your image in this file.
 
-MUNIN_PLUGIN_VERSION='0.2'
-
 PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
 
 # Exit if any commands fail
@@ -18,7 +16,7 @@ npm install jsontool -g
 
 # Configuring image specific packages
 echo "* Configuring image specific packages.";
-pkg_add http://pkgsrc.smartos.skylime.net/skylime-extra/2014Q1/x86_64/spiped-1.3.1nb3.tgz
+pkg_add http://pkgsrc.smartos.skylime.net/skylime-extra/2014Q2/x86_64/spiped-1.3.1nb3.tgz
 
 echo "* Installing API Server."
 L3REL=0.0.5
@@ -52,21 +50,6 @@ mkdir -p /opt/local/etc/uwsgi
 svccfg import /tmp/uwsgi.xml
 svccfg import /tmp/mdata-setup.xml
 rm /tmp/uwsgi.xml /tmp/mdata-setup.xml
-
-# Create munin template file that will be used during mdata setup
-echo "* Create munin template file that will be used during mdata setup"
-cp /opt/local/etc/munin/munin-node.conf /opt/local/etc/munin/munin-node.conf.tpl
-
-# Download and install community munin plugins
-echo "* Download and install community munin plugins (overwrite all other plugins)"
-curl -L https://github.com/drscream/smartos-munin-plugins/archive/v${MUNIN_PLUGIN_VERSION}.tar.gz | tar xz -C /opt/local/lib/munin/plugins
-
-# Create rsyslog.d folder for extra configuration files
-echo "* Create rsyslog.d folder for extra configuration files"
-mkdir -p /opt/local/etc/rsyslog.d
-echo '
-# Include additional config files from extra folder
-$IncludeConfig /opt/local/etc/rsyslog.d/*.conf' >> /opt/local/etc/rsyslog.conf
 
 # Clean up
 echo "* Cleaning up."
