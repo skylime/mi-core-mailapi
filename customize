@@ -7,17 +7,6 @@ PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
 # Exit if any commands fail
 set -o errexit
 
-# Ensure we have updated standard packages
-echo "* Updating standard packages.";
-pkg_delete -v nodejs smtools
-pkg_add -v nodejs smtools dtracetools htop
-npm install smartdc -g
-npm install jsontool -g
-
-# Configuring image specific packages
-echo "* Configuring image specific packages.";
-pkg_add http://pkgsrc.smartos.skylime.net/skylime-extra/2014Q2/x86_64/spiped-1.3.1nb3.tgz
-
 echo "* Installing API Server."
 L3REL=0.0.5
 mkdir /var/www
