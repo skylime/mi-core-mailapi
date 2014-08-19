@@ -2,7 +2,7 @@ python33
 py33-cython
 py33-expat
 py33-pip
-py33-uwsgi
+py33-gunicorn
 py33-sqlite3
 nginx
 redis
