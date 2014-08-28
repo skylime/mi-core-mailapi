@@ -8,7 +8,7 @@ PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
 set -o errexit
 
 echo "* Installing API Server."
-L3REL=0.0.5
+L3REL=0.0.6
 mkdir /var/www
 cd /var/www
 wget https://github.com/wiedi/limeade3/archive/v${L3REL}.tar.gz
