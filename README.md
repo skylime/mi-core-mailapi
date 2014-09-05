@@ -1,27 +1,32 @@
 # mi-core-mailapi
 
-Please refer to https://github.com/joyent/mibe for use of this repo.
+This repository is based on [Joyent mibe](https://github.com/joyent/mibe). Please note this repository should be build with the [mi-core-base](https://github.com/skylime/mi-core-base) mibe image.
+
+## description
+
+Redis based json API for the mail infrastructure mibe images.
+
+This image is part of the following images:
+
+- [mi-core-mailapi](https://github.com/skylime/mi-core-mailapi)
+- [mi-core-mx](https://github.com/skylime/mi-core-mx)
+- [mi-core-submission](https://github.com/skylime/mi-core-submission)
+- [mi-core-mbox](https://github.com/skylime/mi-core-mbox)
+- [mi-core-webmail](://github.com/skylime/mi-core-webmail)
 
 ## mdata variables
 
-- <code>api_redis_key</code>: base64 encoded spipe key
-- <code>import_urls</code>: list of urls that provide a json dump of mail accounts and aliases. The format is described below.
-- <code>nginx_ssl</code>: ssl cert, key and CA for imaps and pop3s in pem format
-- <code>nginx_auth</code>: htpasswd authentication data (username:password_hash)
+- `api_redis_key` [*]: base64 encoded spipe key
+- `import_urls`: list of urls that provide a json dump of mail accounts and aliases. The format is described below.
+- `nginx_ssl` [*]: ssl cert, key and CA for imaps and pop3s in pem format
+- `nginx_auth` [*]: htpasswd authentication data (username:password_hash)
 
-- `munin_allow`: hosts that are allowed to connect to munin, separated by space
-- `munin_deny`: hosts that are explicit not allowed, separated by space
-
-- `syslog_host`: Syslog syntax for remote logging host:
-  - `@192.168.15.1:5514`:  UDP
-  - `@@192.168.15.1:5515`: TCP
-- `syslog_ssl`: Remote host SSL CA if you're using an encrypted channel
+[*] is required to work properly.
 
 ## Services
 
-- <code>443/tcp</code>: https api
-- <code>63790/tcp</code>: spipe encrypted redis master
-
+- `443/tcp`: https api
+- `63790/tcp`: spipe encrypted redis master
 
 ## Legacy JSON import format
 
