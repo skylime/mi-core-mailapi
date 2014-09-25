@@ -1,7 +1,9 @@
-## Changelog for mi-core-mailapi
+## Change Log
 
-### 14.2.0 (2014/09/21 17:43 +00:00)
+### 14.2.1 (2014/09/25 21:42 +00:00)
+- [ff73736](https://github.com/skylime/mi-core-mailapi/commit/ff73736a2637cef51b1a87c139b6de5457fb5df2) update to new core-base image: a6fb1ff0-4333-11e4-a0e1-370c81688134 (@drscream)
 
+### 14.2.0 (2014/09/21 17:44 +00:00)
 - [3fe73b4](https://github.com/skylime/mi-core-mailapi/commit/3fe73b4e91d6b85f38c4f1b40893d731f2156ac0) Initial release (@dcrudgington)
 - [f257eb3](https://github.com/skylime/mi-core-mailapi/commit/f257eb37c85ba5064d7780b282408e950d3cd34d) Added LICENSE and copy directory (@dcrudgington)
 - [d631523](https://github.com/skylime/mi-core-mailapi/commit/d6315237ff15b5d07a9dd1cc1dc3e0e55fe84414) Added var/zoneinit/includes directory (@dcrudgington)
@@ -76,3 +78,4 @@
 - [829eee6](https://github.com/skylime/mi-core-mailapi/commit/829eee6d0018c8bf9c1751e9b46bc79a67c12188) update readme file (@drscream)
 - [2dfc416](https://github.com/skylime/mi-core-mailapi/commit/2dfc41638bce2ad6fc61a84ad270203dcfabc7dd) update to new core-base image: 99c9e7ac-34ed-11e4-bdc4-236f63b1ea9d (@drscream)
 - [a98f595](https://github.com/skylime/mi-core-mailapi/commit/a98f595f4ebe6585982b96349d4ba70aa7ee9245) update to new core-base image: 6babbf24-3765-11e4-a87a-23e846a65e81 (@drscream)
+- [400c3ff](https://github.com/skylime/mi-core-mailapi/commit/400c3ff2017900bba9c5891a5951bb0f15148c1e) update changelog and base (@drscream)
