@@ -1,81 +1,113 @@
-## Change Log
+# Changelog
 
-### 14.2.1 (2014/09/25 21:42 +00:00)
-- [ff73736](https://github.com/skylime/mi-core-mailapi/commit/ff73736a2637cef51b1a87c139b6de5457fb5df2) update to new core-base image: a6fb1ff0-4333-11e4-a0e1-370c81688134 (@drscream)
+## 14.2.2
 
-### 14.2.0 (2014/09/21 17:44 +00:00)
-- [3fe73b4](https://github.com/skylime/mi-core-mailapi/commit/3fe73b4e91d6b85f38c4f1b40893d731f2156ac0) Initial release (@dcrudgington)
-- [f257eb3](https://github.com/skylime/mi-core-mailapi/commit/f257eb37c85ba5064d7780b282408e950d3cd34d) Added LICENSE and copy directory (@dcrudgington)
-- [d631523](https://github.com/skylime/mi-core-mailapi/commit/d6315237ff15b5d07a9dd1cc1dc3e0e55fe84414) Added var/zoneinit/includes directory (@dcrudgington)
-- [4688a1f](https://github.com/skylime/mi-core-mailapi/commit/4688a1f405b65ff625a1506562a3544e1f8187f3) Removed .gitignore from copy directory (@dcrudgington)
-- [b85ec1c](https://github.com/skylime/mi-core-mailapi/commit/b85ec1c9ec55582f177782360cb1d350ef8dc1f5) Added new packages file (@dcrudgington)
-- [44b4e61](https://github.com/skylime/mi-core-mailapi/commit/44b4e61fbcb51ff98307525da592818a2e8dd335) Fixed customize (@dcrudgington)
-- [dd08bcc](https://github.com/skylime/mi-core-mailapi/commit/dd08bcca66779dfb8fd4c705c78de953a6b054f4) Adding Readme (@cobracmder)
-- [82da6b3](https://github.com/skylime/mi-core-mailapi/commit/82da6b3bcdc401835ca9fa9c5d93b4053d9093b9) Added extra space to motd (@dcrudgington)
-- [4a13be1](https://github.com/skylime/mi-core-mailapi/commit/4a13be16f18d7d5d430027229dae509421693807) Merge branch 'master' of github.com:joyent/mi-example (@dcrudgington)
-- [7ba00ad](https://github.com/skylime/mi-core-mailapi/commit/7ba00ad09715c7e8f551cbe5caa95fb025115324) Fixed verbage in packages file (@dcrudgington)
-- [6ba90fc](https://github.com/skylime/mi-core-mailapi/commit/6ba90fcaa1ca08fcab0a7546306b633c74d275ae) initial version of mi-core-mailapi (@wiedi)
-- [ed54986](https://github.com/skylime/mi-core-mailapi/commit/ed549864f199dab2e282678fcd32833f312bd283) strange github release archives (@wiedi)
-- [b519c88](https://github.com/skylime/mi-core-mailapi/commit/b519c88a4e33aea9ccfd2f3c3eea20b35b386ba9) install django before using commands that require it (@wiedi)
-- [3cca342](https://github.com/skylime/mi-core-mailapi/commit/3cca342a8da8df73cb2aae0a26ac2d4d6cad886f) correctly generate static files (@wiedi)
-- [53e00f9](https://github.com/skylime/mi-core-mailapi/commit/53e00f9e027858ea984e5c9e010a364c8531d5e5) chown for redis (@wiedi)
-- [64b78e3](https://github.com/skylime/mi-core-mailapi/commit/64b78e30bdfe324f54aa82dbb9e7034de3506cd1) use full path to base64 (@wiedi)
-- [463fb5c](https://github.com/skylime/mi-core-mailapi/commit/463fb5c2f3794d825131d9ca42ba84e4faa66bfd) enable services at zoneinit and use limeade3 v.0.0.4 (@wiedi)
-- [379fa5a](https://github.com/skylime/mi-core-mailapi/commit/379fa5abe69061c7b94f6f07ac43440f9cee533f) add legacy JSON import (@wiedi)
-- [75c634b](https://github.com/skylime/mi-core-mailapi/commit/75c634b45a7a8cf24651f85dfd52a1b7ba7c55af) bump version (@wiedi)
-- [62b0ed5](https://github.com/skylime/mi-core-mailapi/commit/62b0ed54a75289be88dd7cf46a00c7d8e65f514c) zoneinit scripts should be executeable (@wiedi)
-- [e3763b0](https://github.com/skylime/mi-core-mailapi/commit/e3763b06b33725a49db8981fbb0cae615f10b6d1) basic authentication and ssl for https (@drscream)
-- [95a2c83](https://github.com/skylime/mi-core-mailapi/commit/95a2c8374d1076d31aaba4f6a2cfc9b5b9602e2a) fix broken cronjob (@drscream)
-- [f6f83b4](https://github.com/skylime/mi-core-mailapi/commit/f6f83b47a4ca0d6ada14a4a54c0d263801b4cd46) Add munini-node for monitoring (@drscream)
-- [6a83181](https://github.com/skylime/mi-core-mailapi/commit/6a83181869091ac75dfe3b41643cf3d2c90d0dbc) missing munin plugin variables (@drscream)
-- [ab37a13](https://github.com/skylime/mi-core-mailapi/commit/ab37a139f72ad539211958c8bd2b677dcb621c21) fix plugin check for different munin stuff (@drscream)
-- [824a46a](https://github.com/skylime/mi-core-mailapi/commit/824a46af9c988b2f48d60d480e5922b4b3b4040c) Use mdata-setup with `-s` on enable (@drscream)
-- [eb5baaf](https://github.com/skylime/mi-core-mailapi/commit/eb5baaf2c4661f43d065e5f4a2d9683baee79464) Use extra includes folder for mdata information (@drscream)
-- [96ba70c](https://github.com/skylime/mi-core-mailapi/commit/96ba70c6bc23f10cedc79a2f8ee63ed2f41043e6) Use own repository for munin-plugins (@drscream)
-- [c39c333](https://github.com/skylime/mi-core-mailapi/commit/c39c3338cdc1b35e95124d1865ab2da08f09c4c8) Remote syslog support (@drscream)
-- [5ee3d37](https://github.com/skylime/mi-core-mailapi/commit/5ee3d3775644b16a7b0e22cb3d7ba6a2232260dd) fix version number for munin-plugins (@drscream)
-- [af73914](https://github.com/skylime/mi-core-mailapi/commit/af739143e67bc092e0ab654cd4471495be9d915c) should work without delegated-dataset as well (@drscream)
-- [a5434a8](https://github.com/skylime/mi-core-mailapi/commit/a5434a8830c75362d06ad24855e1463fafc1bd4b) restart rsyslog after config change (@drscream)
-- [2ae5f41](https://github.com/skylime/mi-core-mailapi/commit/2ae5f419e1b1dbe79df231f6aa354a405a604c95) update munin plugins to new version 0.2 (@drscream)
-- [3d6b029](https://github.com/skylime/mi-core-mailapi/commit/3d6b02937b25f44a841c85331ea67e581462c2cb) Generation of djangos SECRET_KEY while zoneinit (@BroSys)
-- [0505194](https://github.com/skylime/mi-core-mailapi/commit/0505194b6f477a439425260d1747237e7ce7bca5) create databse in customize (@BroSys)
-- [cab8f79](https://github.com/skylime/mi-core-mailapi/commit/cab8f79eab1d9e1430f5645bc76e7c5356ce9ce8) typo in customize (@BroSys)
-- [0406d6d](https://github.com/skylime/mi-core-mailapi/commit/0406d6d1edc75df31db32158f41788ff842e94e8) Merge branch 'master' into branch-test (@BroSys)
-- [1bb6272](https://github.com/skylime/mi-core-mailapi/commit/1bb6272610a0f646c06b14b4e1068e10b609cc42) typo in django keygen zoneinit (@BroSys)
-- [9dba762](https://github.com/skylime/mi-core-mailapi/commit/9dba762493d19b25abd306127c5466b523d4b2e8) switched limeade release (@BroSys)
-- [6301fb6](https://github.com/skylime/mi-core-mailapi/commit/6301fb6304003440c24208472c348e25c39b6084) Switch to new core-base image (@drscream)
-- [c8ead08](https://github.com/skylime/mi-core-mailapi/commit/c8ead08f1f354cb1c86bce07afd328206ddef8d4) update version information (@drscream)
-- [cdda3ba](https://github.com/skylime/mi-core-mailapi/commit/cdda3ba5c1981aea3b65d1d135dd1debec7a268c) fix typo (@drscream)
-- [13a6a18](https://github.com/skylime/mi-core-mailapi/commit/13a6a18710758e861ee6b1d7f00333affee593dc) remove mdata setup script (@drscream)
-- [1c4cf93](https://github.com/skylime/mi-core-mailapi/commit/1c4cf935d72a3dc3843d58a81336843977a5d7b5) update to new base (@drscream)
-- [a2459c0](https://github.com/skylime/mi-core-mailapi/commit/a2459c00df96074fc1b0c2c5099ee4350e630643) remove spipe because its in the base (@drscream)
-- [8cce0c3](https://github.com/skylime/mi-core-mailapi/commit/8cce0c387d9c828196e3944e949264476cf4df6d) update base (@drscream)
-- [23ef00a](https://github.com/skylime/mi-core-mailapi/commit/23ef00a026551b9d53feb18a6757cdecfced5c47) be a raw string please (@drscream)
-- [5b19691](https://github.com/skylime/mi-core-mailapi/commit/5b19691a01044961f75cb317f7453a5ba2ae2b2b) remove uwsgi and add gunicorn (@drscream)
-- [96d8148](https://github.com/skylime/mi-core-mailapi/commit/96d8148c21c401b8a31e3e6dcbdce01f5e71239b) replace uwsgi pkg with gunicorn (@drscream)
-- [36228b4](https://github.com/skylime/mi-core-mailapi/commit/36228b48f9dec76e8f1967267ac759bed2bdbfa3) modify nginx config to use gunicorn (@drscream)
-- [0b73d87](https://github.com/skylime/mi-core-mailapi/commit/0b73d872e846c2d8f382225f7a95b513a95b2633) spiped-configure-smf moved to base image (@drscream)
-- [dc0c982](https://github.com/skylime/mi-core-mailapi/commit/dc0c982712740ca2a70783ddd811421187c6940c) update base image (@drscream)
-- [845061d](https://github.com/skylime/mi-core-mailapi/commit/845061d2f84cdb28895b978cf872916bceddd090) version update to v0.0.6 (@drscream)
-- [4d78cb2](https://github.com/skylime/mi-core-mailapi/commit/4d78cb2fe65f28208d386ba1195217c98ddf8736) add backup via znapzend (@drscream)
-- [12208d7](https://github.com/skylime/mi-core-mailapi/commit/12208d7ef585c3f282adf55c05910074c52b2001) update to new base image (@drscream)
-- [9ee6d31](https://github.com/skylime/mi-core-mailapi/commit/9ee6d3115c9d8a64672a134485b58c30d9a5dc10) add --donotask to backup system (@drscream)
-- [ea1ed11](https://github.com/skylime/mi-core-mailapi/commit/ea1ed11794066b25eb887e51f61f2e7cb6abdb48) update to new base image (@drscream)
-- [ab3eee9](https://github.com/skylime/mi-core-mailapi/commit/ab3eee930e9dd064e85b38ef2d64132ca18ad051) add munin support to customize script (@drscream)
-- [41fbe2a](https://github.com/skylime/mi-core-mailapi/commit/41fbe2ab6adf580da3058ebdb7387edc6b35b957) version is not required (@drscream)
-- [08c05ac](https://github.com/skylime/mi-core-mailapi/commit/08c05ac82b96db6106845e225cc5a83c19d85600) update to new core-base image: 86465fe4-312d-11e4-a145-57554f40fa40 (@drscream)
-- [3f1846a](https://github.com/skylime/mi-core-mailapi/commit/3f1846a3315a73c9e3d7187779d172671f2e26ee) Create production ready config file for django (@drscream)
-- [b2ae417](https://github.com/skylime/mi-core-mailapi/commit/b2ae41708095867994dc8668c78f511e9138d2a1) fix syntax (@drscream)
-- [e347540](https://github.com/skylime/mi-core-mailapi/commit/e347540aa60501098dcb048db549e8103855c277) case required (@drscream)
-- [051247e](https://github.com/skylime/mi-core-mailapi/commit/051247e84298f7870efbaafe17159e1375379e66) rename to limeade (@drscream)
-- [c36de5c](https://github.com/skylime/mi-core-mailapi/commit/c36de5cfdc17051bc640a5fb1f1c49e3010622b9) add forward protocol to nginx (@drscream)
-- [e785e49](https://github.com/skylime/mi-core-mailapi/commit/e785e49d2ad93e77a49a12fb9de615a8de31f5c9) update limeade version to v0.0.7 (@drscream)
-- [6288a84](https://github.com/skylime/mi-core-mailapi/commit/6288a84d08dd880adf73a84ea958cc1c0296ac1b) update to new core-base image: fbd244a6-32bf-11e4-8629-73c3e6ed202d (@drscream)
-- [45cad80](https://github.com/skylime/mi-core-mailapi/commit/45cad80107c18c92a87609abf0beb8a2fca6cbb3) update to new core-base image: 5f749f3c-335f-11e4-a952-e780d226fa57 (@drscream)
-- [4a61f92](https://github.com/skylime/mi-core-mailapi/commit/4a61f92a3ae05495be757d26cf0ab0b48716e817) modify cron, to run as root with sudo python command (@drscream)
-- [fc3be7c](https://github.com/skylime/mi-core-mailapi/commit/fc3be7c18423ad9c891e4253a3781fcebde6bada) update to new core-base image: aed27f7a-34c4-11e4-be6c-4392ae5601bc (@drscream)
-- [6a0a8f4](https://github.com/skylime/mi-core-mailapi/commit/6a0a8f45e0bbb45601ef8d4ab10638eaeb216d60) update to new core-base image: 89402478-34cf-11e4-ac94-f3a4d047918f (@drscream)
-- [829eee6](https://github.com/skylime/mi-core-mailapi/commit/829eee6d0018c8bf9c1751e9b46bc79a67c12188) update readme file (@drscream)
-- [2dfc416](https://github.com/skylime/mi-core-mailapi/commit/2dfc41638bce2ad6fc61a84ad270203dcfabc7dd) update to new core-base image: 99c9e7ac-34ed-11e4-bdc4-236f63b1ea9d (@drscream)
-- [a98f595](https://github.com/skylime/mi-core-mailapi/commit/a98f595f4ebe6585982b96349d4ba70aa7ee9245) update to new core-base image: 6babbf24-3765-11e4-a87a-23e846a65e81 (@drscream)
-- [400c3ff](https://github.com/skylime/mi-core-mailapi/commit/400c3ff2017900bba9c5891a5951bb0f15148c1e) update changelog and base (@drscream)
+### New
+
+* update to new core-base image 43aaede4-4622-11e4-a839-d3704910e498. [Thomas Merkel]
+
+## 14.2.1 (2014-09-25)
+
+### Other
+
+* update version because of new base image. [Thomas Merkel]
+* update to new core-base image: a6fb1ff0-4333-11e4-a0e1-370c81688134. [Thomas Merkel]
+
+## 14.2.0 (2014-09-21)
+
+### Other
+
+* update changelog and base. [Thomas Merkel]
+* update to new core-base image: 6babbf24-3765-11e4-a87a-23e846a65e81. [Thomas Merkel]
+* update to new core-base image: 99c9e7ac-34ed-11e4-bdc4-236f63b1ea9d. [Thomas Merkel]
+* update readme file. [Thomas Merkel]
+* update to new core-base image: 89402478-34cf-11e4-ac94-f3a4d047918f. [Thomas Merkel]
+* update to new core-base image: aed27f7a-34c4-11e4-be6c-4392ae5601bc. [Thomas Merkel]
+* modify cron, to run as root with sudo python command. [Thomas Merkel]
+* update to new core-base image: 5f749f3c-335f-11e4-a952-e780d226fa57. [Thomas Merkel]
+* update to new core-base image: fbd244a6-32bf-11e4-8629-73c3e6ed202d. [Thomas Merkel]
+* update limeade version to v0.0.7. [Thomas Merkel]
+* add forward protocol to nginx. [Thomas Merkel]
+* rename to limeade. [Thomas Merkel]
+* case required. [Thomas Merkel]
+* fix syntax. [Thomas Merkel]
+* Create production ready config file for django. [Thomas Merkel]
+* update to new core-base image: 86465fe4-312d-11e4-a145-57554f40fa40. [Thomas Merkel]
+* version is not required. [Thomas Merkel]
+* add munin support to customize script. [Thomas Merkel]
+* update to new base image. [Thomas Merkel]
+* add --donotask to backup system. [Thomas Merkel]
+* update to new base image. [Thomas Merkel]
+* add backup via znapzend. [Thomas Merkel]
+* version update to v0.0.6. [Thomas Merkel]
+* update base image. [Thomas Merkel]
+* spiped-configure-smf moved to base image. [Thomas Merkel]
+* modify nginx config to use gunicorn. [Thomas Merkel]
+* replace uwsgi pkg with gunicorn. [Thomas Merkel]
+* remove uwsgi and add gunicorn. [Thomas Merkel]
+* be a raw string please. [Thomas Merkel]
+* update base. [Thomas Merkel]
+* remove spipe because its in the base. [Thomas Merkel]
+* update to new base. [Thomas Merkel]
+* remove mdata setup script. [Thomas Merkel]
+* fix typo. [Thomas Merkel]
+* update version information. [Thomas Merkel]
+* Switch to new core-base image. [Thomas Merkel]
+
+    * remove munin * remove remote-logging * update to 2014Q2
+
+* switched limeade release. [Boris Poblotzki]
+* typo in django keygen zoneinit. [Boris Poblotzki]
+* Merge branch 'master' into branch-test. [Boris Poblotzki]
+
+    Conflicts:         customize
+
+* update munin plugins to new version 0.2. [Thomas Merkel]
+* restart rsyslog after config change. [Thomas Merkel]
+* should work without delegated-dataset as well. [Thomas Merkel]
+* fix version number for munin-plugins. [Thomas Merkel]
+* Remote syslog support. [Thomas Merkel]
+
+    * add two new mdata options (syslog_host, syslog_ssl) * update readme
+    * create extra config folder for rsyslog
+
+* Use own repository for munin-plugins. [Thomas Merkel]
+* Use extra includes folder for mdata information. [Thomas Merkel]
+* Use mdata-setup with `-s` on enable. [Thomas Merkel]
+* fix plugin check for different munin stuff. [Thomas Merkel]
+* missing munin plugin variables. [Thomas Merkel]
+* Add munini-node for monitoring. [Thomas Merkel]
+
+    * add default plugins * add nginx plugin * add redis plugin
+
+* fix broken cronjob. [Thomas Merkel]
+
+    * if cronjob is missing it should be created and no old one should be
+    deleted * because of `set -x` we use `||` to run possible fail
+    commands also
+
+* basic authentication and ssl for https. [Thomas Merkel]
+
+    * create ssl folder for nginx * deploy ssl certificate and key *
+    create htpasswd auth file based on mdata * update readme
+
+* zoneinit scripts should be executeable. [Sebastian Wiedenroth]
+* bump version. [Sebastian Wiedenroth]
+* add legacy JSON import. [Sebastian Wiedenroth]
+* enable services at zoneinit and use limeade3 v.0.0.4. [Sebastian Wiedenroth]
+* use full path to base64. [Sebastian Wiedenroth]
+* chown for redis. [Sebastian Wiedenroth]
+* correctly generate static files. [Sebastian Wiedenroth]
+* install django before using commands that require it. [Sebastian Wiedenroth]
+* strange github release archives. [Sebastian Wiedenroth]
+* initial version of mi-core-mailapi. [Sebastian Wiedenroth]
+* Fixed verbage in packages file. [Derek Crudgington]
+* Merge branch 'master' of github.com:joyent/mi-example. [Derek Crudgington]
+* Added extra space to motd. [Derek Crudgington]
+* Fixed customize. [Derek Crudgington]
+* Added new packages file. [Derek Crudgington]
+* Removed .gitignore from copy directory. [Derek Crudgington]
+* Added var/zoneinit/includes directory. [Derek Crudgington]
+* Added LICENSE and copy directory. [Derek Crudgington]
+* Initial release. [Derek Crudgington]
+
