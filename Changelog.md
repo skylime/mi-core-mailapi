@@ -1,6 +1,13 @@
 # Changelog
 
-## 14.2.3
+## 14.2.4
+
+### New
+
+* update to new core-base image cd298780-4d55-11e4-addf-63835732c9d9. [Thomas Merkel]
+* update to new limeade3 version (Support spoofing_whitelist and submission_disabled in the basic json api) [Thomas Merkel]
+
+## 14.2.3 (2014-10-02)
 
 ### New
 
