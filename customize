@@ -20,7 +20,7 @@ MUNIN_PLUGINS=(
 set -o errexit
 
 echo "* Installing API Server."
-L3REL=0.0.8
+L3REL=0.0.9
 mkdir /var/www
 cd /var/www
 wget https://github.com/wiedi/limeade3/archive/v${L3REL}.tar.gz
