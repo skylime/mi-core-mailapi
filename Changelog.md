@@ -1,5 +1,18 @@
 # Changelog
 
+## 14.2.6
+
+### Other
+
+* version bump. [Thomas Merkel]
+* update to new limeade3 version 0.0.9. [Boris Poblotzki]
+
+## 14.2.5
+
+### Other
+
+* never released because of wrong version nameing
+
 ## 14.2.4
 
 ### New
