@@ -4,6 +4,7 @@ py33-expat
 py33-pip
 py33-gunicorn
 py33-sqlite3
+py33-ipython
 nginx
 redis
 nano
