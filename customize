@@ -5,37 +5,30 @@
 PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
 
 # Munin plugins
-MUNIN_PLUGIN_SRC='/opt/local/lib/munin/plugins'
-MUNIN_PLUGIN_DST='/opt/local/etc/munin/plugins'
-MUNIN_PLUGINS=(
-	'nginx_request'
-	'nginx_status'
-	'redis_connected_clients'
-	'redis_per_sec'
-	'redis_used_keys'
-	'redis_used_memory'
-)
+MUNIN_PLUGINS="
+	nginx_request
+	nginx_status
+	redis_connected_clients
+	redis_per_sec
+	redis_used_keys
+	redis_used_memory
+"
 
 # Exit if any commands fail
 set -o errexit
 
 echo "* Installing API Server."
 L3REL=0.0.9
-mkdir /var/www
-cd /var/www
-wget https://github.com/wiedi/limeade3/archive/v${L3REL}.tar.gz
-tar zxf v${L3REL}.tar.gz
-mv limeade3-${L3REL}/ limeade3
-rm v${L3REL}.tar.gz
-cd -
+mkdir -p /var/www/limeade3
+curl -L https://github.com/wiedi/limeade3/archive/v${L3REL}.tar.gz | gtar xz -C /var/www/limeade3 --strip-components=1
 
 echo "* Install Python dependencies."
-pip3 install -r /var/www/limeade3/req.txt
-pip3 install -U git+https://github.com/lsbardel/python-stdnet.git@af8ca652d92ad4c00dbbbdec377ad69985a27992
+pip3.4 install -r /var/www/limeade3/req.txt
+pip3.4 install -U git+https://github.com/lsbardel/python-stdnet.git@af8ca652d92ad4c00dbbbdec377ad69985a27992
 
 echo "* Generating Static files."
 cd /var/www/limeade3
-python3.3 manage.py collectstatic --noinput
+python3.4 manage.py collectstatic --noinput
 cd -
 
 echo "* Create ssl folder"
@@ -43,7 +36,7 @@ mkdir -p /opt/local/etc/nginx/ssl
 
 echo "* Create database."
 cd /var/www/limeade3
-python3.3 manage.py syncdb --noinput
+python3.4 manage.py syncdb --noinput
 cd -
 
 echo "* Setup gunicorn and nginx."
@@ -51,27 +44,9 @@ mkdir -p /opt/local/etc/gunicorn
 svccfg import /tmp/gunicorn.xml
 rm /tmp/gunicorn.xml
 
-# Backup via znapzend
-echo "* Backup via znapzend"
-pkg_add http://pkgsrc.smartos.skylime.net/skylime-extra/2014Q2/x86_64/p5-Mojolicious-5.15.tgz
-pkg_add http://pkgsrc.smartos.skylime.net/skylime-extra/2014Q2/x86_64/p5-Mojo-IOLoop-ForkCall-0.14.tgz
-pkg_add http://pkgsrc.smartos.skylime.net/skylime-extra/2014Q2/x86_64/znapzend-0.12.3.tgz
-
 # Activate munin plugins
 echo "* Activate munin plugins"
-for plugin in "${MUNIN_PLUGINS[@]}"; do
-	if [ ! -x ${MUNIN_PLUGIN_SRC}/${plugin} ]; then
-		plugin_src=${plugin%_*}_
-		[ ! -x ${MUNIN_PLUGIN_SRC}/${plugin_src} ] && \
-			plugin_src=${plugin_src%%_*}_
-	else
-		plugin_src=${plugin}
-	fi
-	if [[ -x ${MUNIN_PLUGIN_SRC}/${plugin_src} ]]; then
-		echo "  ${plugin}"
-		ln -sf ${MUNIN_PLUGIN_SRC}/${plugin_src} ${MUNIN_PLUGIN_DST}/${plugin}
-	fi
-done
+/opt/core/bin/munin-node-plugins ${MUNIN_PLUGINS}
 
 # Clean up
 echo "* Cleaning up."
