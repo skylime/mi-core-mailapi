@@ -9,3 +9,5 @@ SECRET_KEY=$(< /dev/urandom tr -dc _A-Z-a-z-0-9 | head -c${1:-100})
 	-e "s:^TEMPLATE_DEBUG.*:TEMPLATE_DEBUG = False:g" \
 	-e "s:^ALLOWED_HOSTS.*:ALLOWED_HOSTS = \['${ALLOWED_HOST}', '127.0.0.1', 'localhost'\]:g" \
 	/var/www/limeade3/limeade3/settings.py
+
+svcadm enable svc:/network/gunicorn:limeade
