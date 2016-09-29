@@ -1,5 +1,21 @@
 # Changelog
 
+## 16.2.0
+
+### New
+
+* Update to newest core-base 16.2.2 Release with lot&#x27;s of new pkgsrc versions. [Thomas Merkel]
+
+  Fixing version update for python 3.3 to 3.4. Fixing download of limeade version via wget / curl.
+
+### Other
+
+* Add new manifest.json format for deploy.zone. [Thomas Merkel]
+* Enable gunicorn:limeade via zoneinit and not by default. [Thomas Merkel]
+* Automatically import gunicorn smf for limeade3. [Thomas Merkel]
+* Update license for SkyLime GmbH. [Thomas Merkel]
+* Add py27-ipython for better debuging. [Thomas Merkel]
+
 ## 14.2.6
 
 ### Other
