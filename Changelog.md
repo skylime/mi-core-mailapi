@@ -1,5 +1,18 @@
 # Changelog
 
+## 16.4.0
+
+### New
+
+* Version bump to 16.4.0. [Thomas Merkel]
+
+  Provide the newest version of core-base and include Let&#x27;s Encrypt support
+
+### Other
+
+* Update License date. [Thomas Merkel]
+* Remove unused gitignore file. [Thomas Merkel]
+
 ## 16.2.0
 
 ### New
