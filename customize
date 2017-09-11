@@ -39,13 +39,12 @@ cd /var/www/limeade3
 python3.4 manage.py syncdb --noinput
 cd -
 
-# Activate munin plugins
 echo "* Activate munin plugins"
 /opt/core/bin/munin-node-plugins ${MUNIN_PLUGINS}
 
-# Clean up
+echo "* Cleanup home/admin because of delegate dataset usage"
+rm -rf /home/admin/.[^.]*
+
 echo "* Cleaning up."
 rm -rf /root/*
-
-# Prepare image for provisioning
 sm-prepare-image -y
