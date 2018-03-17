@@ -1,10 +1,10 @@
-python35
-py35-cython
-py35-expat
-py35-pip
-py35-gunicorn
-py35-sqlite3
-py35-ipython
+python34
+py34-cython
+py34-expat
+py34-pip
+py34-gunicorn
+py34-sqlite3
+py34-ipython
 nginx
 redis
 nano

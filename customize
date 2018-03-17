@@ -23,14 +23,14 @@ mkdir -p /var/www/limeade3
 curl -L https://github.com/wiedi/limeade3/archive/v${L3REL}.tar.gz | gtar xz -C /var/www/limeade3 --strip-components=1
 
 echo "* Install Python dependencies."
-pip3.5 install -r /var/www/limeade3/req.txt
-pip3.5 install -U git+https://github.com/lsbardel/python-stdnet.git@af8ca652d92ad4c00dbbbdec377ad69985a27992
+pip3.4 install -r /var/www/limeade3/req.txt
+pip3.4 install -U git+https://github.com/lsbardel/python-stdnet.git@af8ca652d92ad4c00dbbbdec377ad69985a27992
 
 cd /var/www/limeade3
 echo "* Generating Static files."
-python3.5 manage.py collectstatic --noinput
+python3.4 manage.py collectstatic --noinput
 echo "* Create database."
-python3.5 manage.py syncdb --noinput
+python3.4 manage.py syncdb --noinput
 cd -
 
 echo "* Create ssl folder"
