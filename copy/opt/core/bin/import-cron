@@ -3,5 +3,5 @@ PATH=/usr/local/sbin:/usr/local/bin:/opt/local/sbin:/opt/local/bin:/usr/sbin:/us
 
 cd /var/www/limeade3
 if mdata-get import_urls 1>/dev/null 2>&1; then
-	sudo -u www python3.4 manage.py import $(mdata-get import_urls)
+	sudo -u www ./manage.py import $(mdata-get import_urls)
 fi
