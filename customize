@@ -4,6 +4,9 @@
 
 PATH=/opt/local/gnu/bin:/opt/local/bin:/opt/local/sbin:/usr/bin:/usr/sbin
 
+# Limeade 3 Version
+L3REL="master"
+
 # Munin plugins
 MUNIN_PLUGINS="
 	nginx_request
@@ -18,19 +21,17 @@ MUNIN_PLUGINS="
 set -o errexit
 
 echo "* Installing API Server."
-L3REL=0.0.9
 mkdir -p /var/www/limeade3
-curl -L https://github.com/wiedi/limeade3/archive/v${L3REL}.tar.gz | gtar xz -C /var/www/limeade3 --strip-components=1
+curl -L https://github.com/wiedi/limeade3/archive/${L3REL}.tar.gz | gtar xz -C /var/www/limeade3 --strip-components=1
 
 echo "* Install Python dependencies."
-pip3.5 install -r /var/www/limeade3/req.txt
-pip3.5 install -U git+https://github.com/lsbardel/python-stdnet.git@af8ca652d92ad4c00dbbbdec377ad69985a27992
+pip install -r /var/www/limeade3/req.txt
 
 cd /var/www/limeade3
 echo "* Generating Static files."
-python3.5 manage.py collectstatic --noinput
+./manage.py collectstatic --noinput
 echo "* Create database."
-python3.5 manage.py syncdb --noinput
+./manage.py migrate --noinput
 cd -
 
 echo "* Create ssl folder"
