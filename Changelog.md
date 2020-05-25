@@ -1,5 +1,23 @@
 # Changelog
 
+## 20.1.0
+
+### New
+
+* Add support for Python 3.7 and latest limeade3 / mailapi release. [Thomas Merkel]
+* Add extra dataset support for redis db folder. [Thomas Merkel]
+
+  Please look at the docs/mailapi-migration-2020q1.md guide before running any re-provision.
+
+### Fix
+
+* Call default python version, remove any special version. [Thomas Merkel]
+
+### Other
+
+* Use new SSL generation method. [Thomas Merkel]
+* Yearly license update. [Thomas Merkel]
+
 ## 16.4.0
 
 ### New
