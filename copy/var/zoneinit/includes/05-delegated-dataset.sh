@@ -3,7 +3,9 @@ UUID=$(mdata-get sdc:uuid)
 DDS=zones/$UUID/data
 
 if zfs list $DDS 1>/dev/null 2>&1; then
-	zfs set mountpoint=/var/db/redis/ $DDS
+	zfs create ${DDS}/redis || true
+	zfs set mountpoint=/var/db/redis/ ${DDS}/redis
+
 	chown redis /var/db/redis/
 
 	# znapzend for backup
