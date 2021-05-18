@@ -1,5 +1,13 @@
 # Changelog
 
+## 20.4.0
+
+### New
+
+* Version bump to 2020q4. [Thomas Merkel]
+* Add Python 3.8 as default version for mailapi. [Thomas Merkel]
+* Add support for space and newline nginx_auth mdata. [Thomas Merkel]
+
 ## 20.1.0
 
 ### New
