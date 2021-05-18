@@ -1,10 +1,9 @@
-python37
-py37-cython
-py37-expat
-py37-pip
-py37-gunicorn
-py37-sqlite3
-py37-ipython
+py38-cython
+py38-expat
+py38-pip
+py38-gunicorn
+py38-sqlite3
+py38-ipython
 nginx
 redis
 nano
