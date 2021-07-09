@@ -4,8 +4,8 @@ Please follow this guideline to provide a new dataset for the redis database. Ot
 
 1. Stop the `redis` and `gunicorn` services
 
-	svcadm stop svc:/pkgsrc/redis:default
-	svcadm stop svc:/network/gunicorn:limeade
+	svcadm disable svc:/pkgsrc/redis:default
+	svcadm disable svc:/network/gunicorn:limeade
 
 2. Remove the current running limeade3 (mailapi) cronjob
 
